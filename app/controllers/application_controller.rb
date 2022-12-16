@@ -28,6 +28,6 @@ class ApplicationController < ActionController::Base
   end
   
   def test
-    puts "DELETE -- TESTING"
+    puts "DELETE -- TESTING--BAR"
   end
 end
