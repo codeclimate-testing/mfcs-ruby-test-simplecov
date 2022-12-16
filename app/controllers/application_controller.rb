@@ -26,4 +26,8 @@ class ApplicationController < ActionController::Base
       'application'
     end
   end
+  
+  def test
+    puts "DELETE"
+  end
 end
