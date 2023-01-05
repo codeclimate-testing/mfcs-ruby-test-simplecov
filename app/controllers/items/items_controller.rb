@@ -21,48 +21,6 @@ class Items::ItemsController < ApplicationController
     send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
   end
 
-  def download_zip_b
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-  end
-
-  def download_zip_c
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-  end
-
-  def download_zip_d
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-  end
-
-  def download_zip_e
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-  end
-
-  def download_zip_f
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-  end
-
-  def download_zip_g
-    zip_file = @item.download_all
-    send_file(zip_file, { type: 'application/zip', disposition: 'attachment' })
-    if zip_file
-      if zip_file.exists?
-        p 'test' 
-        if 1 + 1 == 2
-          p 'test'
-        end
-      else
-        p 'other test'
-      end
-    else
-      p 'test'
-    end
-  end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.
