@@ -24,22 +24,6 @@ class Items::MetadataController < ApplicationController
     @items = Item.order(:idno).where(form_id: params[:form_id], metadata: true)
   end
 
-  def new_b
-    @item = Item.new
-    @item.metadata = @form.metadata
-    @item.form_id = params[:form_id]
-    @item.public_release = @form.export_public
-    @items = Item.order(:idno).where(form_id: params[:form_id], metadata: true)
-  end
-
-  def new_c
-    @item = Item.new
-    @item.metadata = @form.metadata
-    @item.form_id = params[:form_id]
-    @item.public_release = @form.export_public
-    @items = Item.order(:idno).where(form_id: params[:form_id], metadata: true)
-  end
-
   # # GET /items/metadata/new/
   # def no_form
   #   redirect_to '/items/metadata', notice: 'no metadata form.'
