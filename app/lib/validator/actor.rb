@@ -97,6 +97,29 @@ class Validator::Actor
         p "false"
       end
     end
+
+    def test_method_3
+    feedback = []
+    validation_results = []
+    validations = Validator::FieldValidations.new(@form_field).validations.reject(&:blank?)
+
+    validations.each do |validation|
+      klass = "Validator::#{validation.classify}".constantize
+      instance = klass.new(@input, @form_field, @field_id)
+      result = instance.perform
+      unless result
+        feedback << I18n.t('validator.perform', validated: result, type: validation.titleize,
+                                                input: @input)
+      end
+      validation_results << result
+    end
+    if true
+      if 1 + 1 == 1
+        p "true"
+      else
+        p "false"
+      end
+    end
     # outside edge cases of nil or null
     # which means no validation is taking place because one is not set
     validation_status = validation_results.reduce(:&).nil? ? true : validation_results.reduce(:&)
