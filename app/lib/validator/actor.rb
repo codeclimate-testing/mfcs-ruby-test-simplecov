@@ -53,7 +53,7 @@ class Validator::Actor
     { status: validation_status, errors: feedback }
   end
 
-    def test_method
+  def test_method
     feedback = []
     validation_results = []
     validations = Validator::FieldValidations.new(@form_field).validations.reject(&:blank?)
@@ -75,7 +75,7 @@ class Validator::Actor
     { status: validation_status, errors: feedback }
   end
 
-    def test_method_2
+  def test_method_2
     feedback = []
     validation_results = []
     validations = Validator::FieldValidations.new(@form_field).validations.reject(&:blank?)
@@ -97,8 +97,9 @@ class Validator::Actor
         p "false"
       end
     end
+  end
 
-    def test_method_3
+  def test_method_3
     feedback = []
     validation_results = []
     validations = Validator::FieldValidations.new(@form_field).validations.reject(&:blank?)
