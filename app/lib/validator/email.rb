@@ -23,6 +23,12 @@ class Validator::Email
     email(@input)
   end
 
+  def test_method
+    return false if @input.blank?
+
+    email(@input)
+  end
+
   # Validates that the given param is a valid email. Uses base ruby regex for doing this.
   #
   # @param [String] address - email address to evaluate.
